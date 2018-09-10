@@ -1,4 +1,4 @@
-class Hero
+class SuperHero
   attr_reader :name, :power, :biography
 
   HEROES = []
@@ -12,5 +12,5 @@ class Hero
   def self.all
     HEROES
   end
-  
+
 end
