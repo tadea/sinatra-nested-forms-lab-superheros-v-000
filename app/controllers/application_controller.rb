@@ -7,4 +7,13 @@ class App < Sinatra::Base
     get '/'do
       erb :super_hero
     end
+
+    post '/teams' do
+    @team = Team.new(params[:team])
+    params[:team][:members].each do |info|
+      SuperHero.new(info)
+    end
+    @member = SuperHero.all
+    erb :'team'
+  end
 end
