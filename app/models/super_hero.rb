@@ -1,17 +1,18 @@
 class SuperHero
-  attr_accessor :name, :power, :bio
 
-  @@all = []
+    attr_accessor :name, :power, :bio
 
-  def initialize(params)
-    @name = params[:name]
-    @power = params[:power]
-    @bio = params[:bio]
-    @@all << self
-  end
+    SUPERHEROS = []
 
-  def self.all
-    @@all
-  end
+    def initialize(args)
+        @name = args[:name]
+        @power = args[:power]
+        @bio = args[:bio]
+        SUPERHEROS << self
+    end
 
-end 
+    def self.all
+        SUPERHEROS
+    end
+
+end
